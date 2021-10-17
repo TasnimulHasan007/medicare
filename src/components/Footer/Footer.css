@@ -1,0 +1,35 @@
+footer {
+  background: var(--secondary-color);
+  color: #fff;
+}
+
+.footer i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer .line {
+  width: 70%;
+  height: 0.15rem;
+  background: #fff;
+  margin-block: 0.5rem;
+}
+
+.footer p {
+  font-weight: 300;
+}
+
+.copyright {
+  text-align: center;
+  padding-block: 1rem;
+  backdrop-filter: brightness(0.8);
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    text-align: center;
+  }
+  .line {
+    margin-inline: auto;
+  }
+}

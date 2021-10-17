@@ -24,11 +24,3 @@ a {
   border: none;
   background: none;
 }
-
-/* utilities */
-.btn-main {
-  padding: 0.5rem 1.5rem;
-  border: 0.125rem solid;
-  font-weight: 500;
-  transition: 250ms ease;
-}

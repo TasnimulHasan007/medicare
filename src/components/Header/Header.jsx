@@ -1,29 +1,40 @@
-import React from "react"
+import Burger from "./Burger"
+import styled from "styled-components"
 import { Container } from "react-bootstrap"
-import { Link } from "react-router-dom"
-import "./Header.css"
+import { NavLink } from "react-router-dom"
+
+const Nav = styled.nav`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1rem;
+
+  .logo {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    font-weight: 500;
+    cursor: pointer;
+
+    span {
+      color: var(--primary-color);
+    }
+  }
+`
 
 const Header = () => {
   return (
-    <header>
-      <Container className="header">
-        <div className="brand">
+    <Container>
+      <Nav>
+        <NavLink exact to="/" className="logo">
           <span>
-            <i className="fas fa-heartbeat"></i> Medi
+            <i className="fas fa-heartbeat"></i>Medi
           </span>
           Care
-        </div>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/blog">Blog</Link>
-        </nav>
-        <div className="btn-container">
-          <button className="btn-main login">Login</button>
-          <button className="btn-main register">Register</button>
-        </div>
-      </Container>
-    </header>
+        </NavLink>
+        <Burger />
+      </Nav>
+    </Container>
   )
 }
 

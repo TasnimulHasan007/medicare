@@ -1,62 +1,56 @@
 [
-	{
-		"serviceName" : "Pediatric Clinic",
-		"serviceType" : ["Pediatric" , "Therapy"],
-		"description" : "Choosing the right pediatrician is one of the most important things you can do for your child. By selecting the Pediatric Clinic, you can feel comfortable you have made the best decision. We go beyond taking care of children when they are ill; we emphasize maintaining their health and monitoring their growth and development from infancy into early adulthood.",
-		"image" : "https://i.ibb.co/nDKBT87/pediatric-clinic.jpg",
-		"doctorName" : "Nelson Lent",
-		"insuranceCoverage" : "yes",
-		"patientAges" : "3-12"
-		
-	},
-	{
-		"serviceName" : "Gynecological Clinic",
-		"serviceType" : ["Therapy"],
-		"description" : "Gynecologists are doctors who specialize in women's health, with a focus on the female reproductive system. They deal with a wide range of issues, including obstetrics, or pregnancy and childbirth, menstruation and fertility issues, sexually transmitted infections (STIs), hormone disorders, and others.",
-		"image" : "https://i.ibb.co/ctr72NK/Gynecological-Clininc.jpg",
-		"doctorName" : "Luna Zoey",
-		"insuranceCoverage" : "yes",
-		"patientAges" : "18-45"
-		
-	},
-	{
-		"serviceName" : "Laboratory Analysis",
-		"serviceType" : ["Diagnosis", "Pharmacy"],
-		"description" : "Laboratory analysis means a test performed by a labo- ratory on body fluid, tissue, or excretion for the purpose of determining the presence, absence, or concentration of various substances in the human body.",
-		"image" : "https://i.ibb.co/bWhYshK/laboratory-analysis.jpg",
-		"doctorName" : "Ethan Jacob",
-		"insuranceCoverage" : "yes",
-		"patientAges" : "all"
-		
-	},
-	{
-		"serviceName" : "Cardiac Clinic",
-		"serviceType" : ["Diagnosis", "Therapy"],
-		"description" : "The Cardiac Clinic is a team of cardiologists known for its expertise in managing cardiology conditions. Our team of highly trained consultants offer a comprehensive range of treatment options for heart related disorders from diagnostic testing to a research-based treatment plan for each patient.",
-		"image" : "https://i.ibb.co/L9FjjXq/cardiac-clinic.jpg",
-		"doctorName" : "Aiden Matthew",
-		"insuranceCoverage" : "yes",
-		"patientAges" : "30+"
-		
-	},
-	{
-		"serviceName" : "Diagnosis Clinic",
-		"serviceType" : ["Diagnosis", "Therapy"],
-		"description" : "A medical diagnostic center is a facility that has equipment and and supplies to do x-rays, specialized tests, blood and urine cultures etc. You go to such a place with a doctor’s order or prescription. An auto diagnostic center is similar to a medical facility, and have the equipment and experts to test various parts on vehicles, such as engines, valves, etc.",
-		"image" : "https://i.ibb.co/Fzh7qpH/dianosis-clinic.jpg",
-		"doctorName" : "David Joseph",
-		"insuranceCoverage" : "yes",
-		"patientAges" : "all"
-		
-	},
-	{
-		"serviceName" : "Rehabilitation Therapy",
-		"serviceType" : ["Diagnosis", "Therapy"],
-		"description" : "If you’ve been seriously injured, undergone surgery or experienced a stroke, your doctor may recommend rehabilitation to help you recover. Rehabilitation therapy offers a controlled, medical environment to help your body heal while you regain strength, relearn skills you lost or find new ways to do activities that may now be difficult.",
-		"image" : "https://i.ibb.co/P4YdhTw/rehabilitation-therapy.jpg",
-		"doctorName" : "Leo Carson",
-		"insuranceCoverage" : "yes",
-		"patientAges" : "all"
-		
-	},
+  {
+    "serviceName": "Pediatric Clinic",
+    "serviceType": ["Pediatric", "Therapy"],
+    "description": "Choosing the right pediatrician is one of the most important things you can do for your child. By selecting the Pediatric Clinic, you can feel comfortable you have made the best decision. We go beyond taking care of children when they are ill; we emphasize maintaining their health and monitoring their growth and development from infancy into early adulthood.",
+    "image": "https://i.ibb.co/nDKBT87/pediatric-clinic.jpg",
+    "doctorName": "Nelson Lent",
+    "insuranceCoverage": "yes",
+    "patientAges": "3-12"
+  },
+  {
+    "serviceName": "Gynecological Clinic",
+    "serviceType": ["Therapy"],
+    "description": "Gynecologists are doctors who specialize in women's health, with a focus on the female reproductive system. They deal with a wide range of issues, including obstetrics, or pregnancy and childbirth, menstruation and fertility issues, sexually transmitted infections (STIs), hormone disorders, and others.",
+    "image": "https://i.ibb.co/ctr72NK/Gynecological-Clininc.jpg",
+    "doctorName": "Luna Zoey",
+    "insuranceCoverage": "yes",
+    "patientAges": "18-45"
+  },
+  {
+    "serviceName": "Laboratory Analysis",
+    "serviceType": ["Diagnosis", "Pharmacy"],
+    "description": "Laboratory analysis means a test performed by a labo- ratory on body fluid, tissue, or excretion for the purpose of determining the presence, absence, or concentration of various substances in the human body.",
+    "image": "https://i.ibb.co/bWhYshK/laboratory-analysis.jpg",
+    "doctorName": "Ethan Jacob",
+    "insuranceCoverage": "yes",
+    "patientAges": "all"
+  },
+  {
+    "serviceName": "Cardiac Clinic",
+    "serviceType": ["Diagnosis", "Therapy"],
+    "description": "The Cardiac Clinic is a team of cardiologists known for its expertise in managing cardiology conditions. Our team of highly trained consultants offer a comprehensive range of treatment options for heart related disorders from diagnostic testing to a research-based treatment plan for each patient.",
+    "image": "https://i.ibb.co/L9FjjXq/cardiac-clinic.jpg",
+    "doctorName": "Aiden Matthew",
+    "insuranceCoverage": "yes",
+    "patientAges": "30+"
+  },
+  {
+    "serviceName": "Diagnosis Clinic",
+    "serviceType": ["Diagnosis", "Therapy"],
+    "description": "A medical diagnostic center is a facility that has equipment and and supplies to do x-rays, specialized tests, blood and urine cultures etc. You go to such a place with a doctor’s order or prescription. An auto diagnostic center is similar to a medical facility, and have the equipment and experts to test various parts on vehicles, such as engines, valves, etc.",
+    "image": "https://i.ibb.co/Fzh7qpH/dianosis-clinic.jpg",
+    "doctorName": "David Joseph",
+    "insuranceCoverage": "yes",
+    "patientAges": "all"
+  },
+  {
+    "serviceName": "Rehabilitation Therapy",
+    "serviceType": ["Diagnosis", "Therapy"],
+    "description": "If you’ve been seriously injured, undergone surgery or experienced a stroke, your doctor may recommend rehabilitation to help you recover. Rehabilitation therapy offers a controlled, medical environment to help your body heal while you regain strength, relearn skills you lost or find new ways to do activities that may now be difficult.",
+    "image": "https://i.ibb.co/P4YdhTw/rehabilitation-therapy.jpg",
+    "doctorName": "Leo Carson",
+    "insuranceCoverage": "yes",
+    "patientAges": "all"
+  }
 ]

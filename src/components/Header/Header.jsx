@@ -28,7 +28,7 @@ const Header = () => {
       <Nav>
         <NavLink exact to="/" className="logo">
           <span>
-            <i className="fas fa-heartbeat"></i>Medi
+            <i className="fas fa-heartbeat"></i> Medi
           </span>
           Care
         </NavLink>

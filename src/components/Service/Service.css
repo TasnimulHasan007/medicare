@@ -1,0 +1,46 @@
+.service {
+  height: 100%;
+  box-shadow: 0 5px 15px rgb(0 0 0 / 20%);
+}
+
+.service img {
+  width: 100%;
+}
+
+.service-body {
+  padding: 1.5rem;
+}
+
+.service-body h4 {
+  font-weight: 300;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+.service-body span {
+  font-size: 0.8165rem;
+  font-weight: 400;
+  color: var(--primary-color);
+}
+
+.service-body p {
+  font-size: 0.9rem;
+  margin-block: 1.4rem;
+  text-align: justify;
+}
+
+.service-body button {
+  width: 100%;
+  background: var(--primary-color);
+  color: #fff;
+  padding-block: 0.5rem;
+  border: 0.125rem solid transparent;
+  transition: 250ms ease;
+}
+
+.service-body button:hover,
+button:focus {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  background: transparent;
+}

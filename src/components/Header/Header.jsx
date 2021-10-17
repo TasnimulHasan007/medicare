@@ -24,17 +24,19 @@ const Nav = styled.nav`
 
 const Header = () => {
   return (
-    <Container>
-      <Nav>
-        <NavLink exact to="/" className="logo">
-          <span>
-            <i className="fas fa-heartbeat"></i> Medi
-          </span>
-          Care
-        </NavLink>
-        <Burger />
-      </Nav>
-    </Container>
+    <header className="sticky-top bg-white">
+      <Container>
+        <Nav>
+          <NavLink exact to="/" className="logo">
+            <span>
+              <i className="fas fa-heartbeat"></i> Medi
+            </span>
+            Care
+          </NavLink>
+          <Burger />
+        </Nav>
+      </Container>
+    </header>
   )
 }
 

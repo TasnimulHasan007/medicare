@@ -1,0 +1,65 @@
+/* header styles */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1rem;
+  position: sticy;
+  top: 0;
+}
+
+.header .brand {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
+.header .brand > span {
+  color: var(--primary-color);
+}
+
+.header nav {
+  display: flex;
+  align-items: center;
+}
+
+.header nav a {
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+
+  transition: 250ms ease;
+}
+
+.header nav a:hover,
+.header nav a:focus {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+/* buttons */
+.header .register {
+  margin-left: 1rem;
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #fff;
+}
+
+.header .register:hover,
+.header .register:focus {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  background: transparent;
+}
+
+.header .login {
+  background: transparent;
+  color: var(--secondary-color);
+}
+
+.header .login:hover,
+.header .login:focus {
+  color: #fff;
+  border-color: var(--secondary-color);
+  background: var(--secondary-color);
+}

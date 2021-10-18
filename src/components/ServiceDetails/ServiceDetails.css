@@ -9,23 +9,6 @@
   padding: 10px 20px;
 }
 
-.service-details input {
-  display: block;
-  background: #eee;
-  width: 100%;
-  padding: 10px;
-  margin: 5px 0 15px;
-}
-
-.service-details .send-btn {
-  background: var(--primary-color);
-  color: #fff;
-}
-
-.service-details .send-btn:hover {
-  opacity: 0.7;
-  backdrop-filter: blur(5px);
-}
 
 .service-details img {
   width: 100%;

@@ -5,6 +5,9 @@ import "./App.css"
 import Footer from "./components/Footer/Footer"
 import ServiceDetails from "./components/ServiceDetails/ServiceDetails"
 import { createContext, useEffect, useState } from "react"
+import Login from "./Pages/Login/Login"
+import Register from "./Pages/Register/Register"
+import AuthProvider from "./contexts/AuthProvider"
 
 export const ServicesContext = createContext([])
 
@@ -18,21 +21,29 @@ function App() {
 
   return (
     <ServicesContext.Provider value={services}>
-      <Router>
-        <Header />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/home">
-            <Home />
-          </Route>
-          <Route path="/services/:serviceId">
-            <ServiceDetails />
-          </Route>
-        </Switch>
-        <Footer />
-      </Router>
+      <AuthProvider>
+        <Router>
+          <Header />
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/home">
+              <Home />
+            </Route>
+            <Route path="/services/:serviceId">
+              <ServiceDetails />
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route path="/register">
+              <Register />
+            </Route>
+          </Switch>
+          <Footer />
+        </Router>
+      </AuthProvider>
     </ServicesContext.Provider>
   )
 }

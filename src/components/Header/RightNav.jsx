@@ -1,10 +1,12 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
 import styled from "styled-components"
+import useAuth from "../../hooks/useAuth"
 
 const Div = styled.div`
   list-style: none;
   display: flex;
+  align-items: center;
   a {
     padding: 0.5rem 1rem;
     font-weight: 500;
@@ -38,6 +40,7 @@ const Div = styled.div`
 `
 
 const RightNav = ({ open }) => {
+  const { user, logOut } = useAuth()
   return (
     <Div open={open}>
       <NavLink exact to="/">
@@ -46,8 +49,19 @@ const RightNav = ({ open }) => {
 
       <NavLink to="/about">About Us</NavLink>
       <NavLink to="/contact">Contact Us</NavLink>
-      <NavLink to="/login">Log In</NavLink>
-      <NavLink to="/register">Sign Up</NavLink>
+      {user.email ? (
+        <>
+          <p className="name">{user.displayName}</p>
+          <button onClick={logOut} className="log-out">
+            Log Out
+          </button>
+        </>
+      ) : (
+        <>
+          <NavLink to="/login">Log In</NavLink>
+          <NavLink to="/register">Sign Up</NavLink>
+        </>
+      )}
     </Div>
   )
 }

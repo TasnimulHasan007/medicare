@@ -18,8 +18,8 @@ const ServiceDetails = () => {
     <Container>
       <div className="service-details">
         <div className="d-flex justify-content-between">
-          <Link exact to="/">
-            <i class="fas fa-arrow-left"></i> Go Back Home
+          <Link to="/home">
+            <i className="fas fa-arrow-left"></i> Go Back Home
           </Link>
           <h2>{service?.serviceName}</h2>
         </div>
@@ -52,20 +52,16 @@ const ServiceDetails = () => {
               <div className="underline"></div>
               <form onSubmit={handleSubmit}>
                 <label htmlFor="firstname">First Name</label>
-                <input type="text" id="firstname" />
+                <input type="text" id="firstname" required />
                 <label htmlFor="lastname">Last Name</label>
-                <input type="text" id="lastname" />
+                <input type="text" id="lastname" required />
                 <label htmlFor="phone">Your Phone</label>
-                <input type="tel" id="phone" />
+                <input type="tel" id="phone" required />
                 <label htmlFor="email">Your Email</label>
-                <input type="email" id="email" />
+                <input type="email" id="email" required />
                 <label htmlFor="date">Appointment Date</label>
-                <input type="date" id="date" />
-                <input
-                  type="submit"
-                  value="Send Message"
-                  className="send-btn"
-                />
+                <input type="date" id="date" required />
+                <input type="submit" value="Send Message" className="btn" />
               </form>
             </div>
           </Col>

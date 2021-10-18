@@ -1,9 +1,12 @@
 import React, { useState } from "react"
 import { Container } from "react-bootstrap"
-import { Link, useHistory } from "react-router-dom"
+import { Link, useHistory, useLocation } from "react-router-dom"
 import useAuth from "../../hooks/useAuth"
 
 const Login = () => {
+  // location
+  const location = useLocation()
+  const redirect_url = location.state?.from || "/home"
   // history
   const history = useHistory()
   // states
@@ -11,7 +14,8 @@ const Login = () => {
   const [password, setPassword] = useState("")
   const [error, setError] = useState("")
   // authentication methods
-  const { googleSignIn, auth, signInWithEmailAndPassword } = useAuth()
+  const { googleSignIn, auth, signInWithEmailAndPassword, setIsLoading } =
+    useAuth()
   // handle email change
   const handleEmail = (e) => {
     setEmail(e.target.value)
@@ -23,15 +27,27 @@ const Login = () => {
   // handle login
   const handleLogin = (e) => {
     e.preventDefault()
+    setIsLoading(true)
     signInWithEmailAndPassword(auth, email, password)
       .then((res) => {
         setError("")
-        history.push("/home")
+        history.push(redirect_url)
       })
       .catch((error) => {
         setError(error.message)
       })
+      .finally(() => setIsLoading(false))
   }
+  // google sign in
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((res) => history.push(redirect_url))
+      .catch((error) => {
+        setError(error.message)
+      })
+      .finally(setIsLoading(false))
+  }
+
   return (
     <Container>
       <div className="form-container">
@@ -56,7 +72,7 @@ const Login = () => {
         </form>
         <Link to="/register">New to MediCare?</Link>
         <hr />
-        <button onClick={googleSignIn} className="btn">
+        <button onClick={handleGoogleSignIn} className="btn">
           <i className="fab fa-google me-1"></i> Continue With Google
         </button>
       </div>

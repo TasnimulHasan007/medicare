@@ -1,17 +1,32 @@
 import React, { useState } from "react"
 import { Container } from "react-bootstrap"
-import { Link, useHistory } from "react-router-dom"
+import { Link, useHistory, useLocation } from "react-router-dom"
 import useAuth from "../../hooks/useAuth"
 
 const Register = () => {
+  // location
+  const location = useLocation()
+  const redirect_url = location.state?.from || "/home"
   // history
   const history = useHistory()
   // states
+  const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [error, setError] = useState("")
   // authentication methods
-  const { googleSignIn, createUserWithEmailAndPassword, auth } = useAuth()
+  const {
+    googleSignIn,
+    createUserWithEmailAndPassword,
+    auth,
+    updateProfile,
+    verifyUser,
+    setIsLoading,
+  } = useAuth()
+  // handle name change
+  const handleName = (e) => {
+    setName(e.target.value)
+  }
   // handle email change
   const handleEmail = (e) => {
     setEmail(e.target.value)
@@ -23,6 +38,7 @@ const Register = () => {
   // handle registration
   const handleRegistration = (e) => {
     e.preventDefault()
+    setIsLoading(true)
     // email validation
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setError("Invalid Email")
@@ -46,12 +62,30 @@ const Register = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((res) => {
         setError("")
-        history.push("/home")
+        setUserName()
+        verifyUser()
+        history.push(redirect_url)
       })
       .catch((error) => {
         setError(error.message)
       })
+      .finally(() => setIsLoading(false))
   }
+
+  const setUserName = () => {
+    updateProfile(auth.currentUser, { displayName: name }).then((res) => {})
+  }
+
+  // google sign in
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((res) => history.push(redirect_url))
+      .catch((error) => {
+        setError(error.message)
+      })
+      .finally(() => setIsLoading(false))
+  }
+
   return (
     <Container>
       <div className="form-container">
@@ -63,7 +97,7 @@ const Register = () => {
         </div>
         <form onSubmit={handleRegistration}>
           <label htmlFor="name">Full Name</label>
-          <input type="text" id="name" required />
+          <input onBlur={handleName} type="text" id="name" required />
           <label htmlFor="email">Your Email</label>
           <input onBlur={handleEmail} type="email" id="email" required />
           <label htmlFor="password">Password</label>
@@ -78,7 +112,7 @@ const Register = () => {
         </form>
         <Link to="/login">Already registered?</Link>
         <hr />
-        <button onClick={googleSignIn} className="btn">
+        <button onClick={handleGoogleSignIn} className="btn">
           <i className="fab fa-google me-1"></i> Continue With Google
         </button>
       </div>

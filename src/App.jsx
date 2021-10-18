@@ -8,6 +8,7 @@ import { createContext, useEffect, useState } from "react"
 import Login from "./Pages/Login/Login"
 import Register from "./Pages/Register/Register"
 import AuthProvider from "./contexts/AuthProvider"
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute"
 
 export const ServicesContext = createContext([])
 
@@ -20,8 +21,8 @@ function App() {
   }, [])
 
   return (
-    <ServicesContext.Provider value={services}>
-      <AuthProvider>
+    <AuthProvider>
+      <ServicesContext.Provider value={services}>
         <Router>
           <Header />
           <Switch>
@@ -31,9 +32,9 @@ function App() {
             <Route path="/home">
               <Home />
             </Route>
-            <Route path="/services/:serviceId">
+            <PrivateRoute path="/services/:serviceId">
               <ServiceDetails />
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login />
             </Route>
@@ -43,8 +44,8 @@ function App() {
           </Switch>
           <Footer />
         </Router>
-      </AuthProvider>
-    </ServicesContext.Provider>
+      </ServicesContext.Provider>
+    </AuthProvider>
   )
 }
 

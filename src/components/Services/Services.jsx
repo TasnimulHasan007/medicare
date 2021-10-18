@@ -1,17 +1,11 @@
-import React, { useEffect, useState } from "react"
+import React, { useContext } from "react"
 import { Container, Row } from "react-bootstrap"
+import { ServicesContext } from "../../App"
 import Service from "../Service/Service"
 import "./Services.css"
 
 const Services = () => {
-  // state
-  const [services, setServices] = useState([])
-  // loading data
-  useEffect(() => {
-    fetch("services.json")
-      .then((res) => res.json())
-      .then((data) => setServices(data))
-  }, [])
+  const services = useContext(ServicesContext)
 
   return (
     <Container className="services">

@@ -1,9 +1,10 @@
 import React from "react"
 import { Col } from "react-bootstrap"
+import { Link } from "react-router-dom"
 import "./Service.css"
 
 const Service = ({
-  service: { serviceName, image, serviceType, description },
+  service: { id, serviceName, image, serviceType, description },
 }) => {
   return (
     <Col lg={4} md={6}>
@@ -15,7 +16,7 @@ const Service = ({
           <h4>{serviceName}</h4>
           <span>{serviceType.join(", ")}</span>
           <p>{description.slice(0, 200)}</p>
-          <button>Details</button>
+          <Link to={`/services/${id}`}>Details</Link>
         </div>
       </div>
     </Col>

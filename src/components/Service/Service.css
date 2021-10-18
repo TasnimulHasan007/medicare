@@ -29,7 +29,8 @@
   text-align: justify;
 }
 
-.service-body button {
+.service-body a {
+  text-align: center;
   width: 100%;
   background: var(--primary-color);
   color: #fff;
@@ -38,8 +39,7 @@
   transition: 250ms ease;
 }
 
-.service-body button:hover,
-button:focus {
+.service-body a:hover {
   border-color: var(--primary-color);
   color: var(--primary-color);
   background: transparent;

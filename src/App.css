@@ -6,9 +6,20 @@
   --secondary-color: #3f4b5d;
 }
 
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 0.375rem;
+  height: 0.375rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+
 /* resets */
 body {
   font-family: "Roboto", sans-serif;
+  overflow: overlay;
 }
 
 a {

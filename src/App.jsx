@@ -10,6 +10,8 @@ import Register from "./Pages/Register/Register"
 import AuthProvider from "./contexts/AuthProvider"
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute"
 import NotFound from "./Pages/NotFound/NotFound"
+import Blog from "./Pages/Blog/Blog"
+import About from "./Pages/About/About"
 
 export const ServicesContext = createContext([])
 
@@ -36,6 +38,12 @@ function App() {
             <PrivateRoute path="/services/:serviceId">
               <ServiceDetails />
             </PrivateRoute>
+            <Route path="/blog">
+              <Blog />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
             <Route path="/login">
               <Login />
             </Route>

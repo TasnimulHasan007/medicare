@@ -1,0 +1,100 @@
+/* about */
+.about img {
+  width: 100%;
+}
+
+/* banner */
+.about-banner {
+  text-align: center;
+  background: url(../../images/banner2.jpg);
+  padding-block: 3rem;
+}
+/* about us */
+.about .about-us {
+  margin-block: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.about .about-us h5 {
+  color: var(--primary-color);
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.about .about-us h1 {
+  margin-block: 1.5rem;
+}
+
+/* services */
+.about .services span {
+  display: flex;
+  align-items: center;
+}
+
+.about .services i {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+/* our doctors */
+.our-doctors {
+  padding-block: 3rem;
+  text-align: center;
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.our-doctors h5 {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.our-doctors h1 {
+  margin-bottom: 1.5rem;
+}
+
+.doctor {
+  background: #fff;
+  color: var(--secondary-color);
+}
+
+.doctor h4 {
+  margin-top: 1rem;
+}
+
+.doctor p {
+  padding-bottom: 1rem;
+}
+/* testimonials */
+.testimonials {
+  margin-block: 3rem;
+}
+
+.testimonial {
+  padding: 3rem;
+}
+
+.testimonial i {
+  color: var(--primary-color);
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}
+
+.testimonial .user {
+  display: flex;
+}
+
+.testimonial .user h5 {
+  color: var(--primary-color);
+}
+
+.testimonial .user img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  margin-right: 1rem;
+}

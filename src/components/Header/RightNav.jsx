@@ -48,12 +48,12 @@ const RightNav = ({ open }) => {
         Home
       </NavLink>
 
+      <NavLink to="/blog">Our Blog</NavLink>
       <NavLink to="/about">About Us</NavLink>
-      <NavLink to="/contact">Contact Us</NavLink>
       {user.email ? (
         <>
           <p className="name">{user.displayName}</p>
-          <button onClick={logOut} className="log-out">
+          <button onClick={logOut} className="btn-main">
             Log Out
           </button>
         </>

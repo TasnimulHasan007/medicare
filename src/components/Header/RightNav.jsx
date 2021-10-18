@@ -12,6 +12,7 @@ const Div = styled.div`
     font-weight: 500;
     color: var(--secondary-color);
     border-bottom: 0.125rem solid transparent;
+    transition: 250ms ease;
 
     &:hover {
       color: var(--primary-color);
@@ -31,7 +32,7 @@ const Div = styled.div`
     height: 100vh;
     width: 300px;
     padding-top: 3.5rem;
-    transition: transform 0.3s ease-in-out;
+    transition: 250ms ease-in-out;
     a {
       color: #fff;
       border: none;

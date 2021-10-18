@@ -19,7 +19,7 @@ const ServiceDetails = () => {
       <div className="service-details">
         <div className="d-flex justify-content-between">
           <Link to="/home">
-            <i className="fas fa-arrow-left"></i> Go Back Home
+            <i className="fas fa-arrow-left me-2"></i> Go Back Home
           </Link>
           <h2>{service?.serviceName}</h2>
         </div>
@@ -44,6 +44,7 @@ const ServiceDetails = () => {
                 <p>Patient Ages</p>
                 <span>{service?.patientAges}</span>
               </div>
+              <p>{service?.description}</p>
             </div>
           </Col>
           <Col lg={8} md={6}>

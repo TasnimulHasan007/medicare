@@ -9,6 +9,7 @@ import Login from "./Pages/Login/Login"
 import Register from "./Pages/Register/Register"
 import AuthProvider from "./contexts/AuthProvider"
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute"
+import NotFound from "./Pages/NotFound/NotFound"
 
 export const ServicesContext = createContext([])
 
@@ -40,6 +41,9 @@ function App() {
             </Route>
             <Route path="/register">
               <Register />
+            </Route>
+            <Route path="*">
+              <NotFound />
             </Route>
           </Switch>
           <Footer />
